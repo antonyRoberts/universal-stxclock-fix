@@ -1,7 +1,3 @@
-# CliUniversalDemo
+I Changed your routes on the Server side in server.ts, and a little bit in Home Module though you shouldn't have to.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
-
-## Start the server
-
-Run `npm run start` to start the server. Navigate to `http://localhost:4000/`.
+The Main differences are, you need to import HttpModule into the app.module and app.server.module files if you're going to use Http, before injecting it in the service.  Also added isPlatformBrowser() to the homeComponent, so it only makes the API call when it knows its the browser.
